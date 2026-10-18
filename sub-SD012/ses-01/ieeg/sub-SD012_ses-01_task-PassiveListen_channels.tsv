@@ -146,4 +146,4 @@ DC16	MISC	n/a	512	n/a	bad	noise
 TRIG	TRIG	n/a	n/a	n/a	bad	noise
 OSAT	MISC	n/a	512	n/a	bad	noise
 PR	MISC	n/a	512	n/a	bad	noise
-STI 014	MISC	n/a	512	n/a	bad	noise
+Pleth	MISC	µV	n/a	n/a	n/a	n/a

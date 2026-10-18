@@ -29,3 +29,19 @@ Participants passively listened to 30-45s passages of conversational speech and 
 MISSING DATA
 
 Anatomical scans for particpant SD012 are not available due to excessive movement artifacts.
+
+## Channel names follow the data headers (18 Oct 2026)
+
+In 11 recordings the channel list of channels.tsv did not equal the data-file header (names, order or count), so `mne_bids.read_raw_bids` stopped with 'Channel mismatch' (or 'Duplicate channel names'); EEGDash renamed the data channels by position to the channels.tsv names, which gives wrong labels wherever the two lists are not aligned. Since 18 Oct 2026 every channels.tsv lists exactly the header channels, in header order, with the header names (MNE names: duplicated header labels numbered -0, -1).
+
+Rows were matched to header channels BY NAME, never by position (exact; then case/whitespace; then the recorder prefix 'EEG '/'POL ', '_' and zero padding; then a trailing '-<reference>' token). Matched rows keep all their columns (type, units, status, ...); 0 rows took the header name.
+
+10 header channels had no channels.tsv row (8 files) and got a new row: type from the name (ECG/EMG/EOG/trigger) or from the other contacts of the same shaft, else MISC; units from the header; status n/a. Examples: `sub-SD011_ses-01_task-PassiveListen_ieeg.edf`: Pleth; `sub-SD012_ses-01_task-PassiveListen_ieeg.edf`: Pleth; `sub-SD012_ses-02_task-PassiveListen_ieeg.edf`: Pleth.
+
+17 channels.tsv rows had no channel in the data file (11 files) and were removed; they are kept verbatim under `sourcedata/channels-removed-2026-10-18/` (same relative path). Examples: `sub-SD010_ses-01_task-PassiveListen_ieeg.edf`: Trigger Event, Patient Event, STI 014; `sub-SD011_ses-01_task-PassiveListen_ieeg.edf`: STI 014; `sub-SD012_ses-01_task-PassiveListen_ieeg.edf`: STI 014.
+
+EEGDash's positional renaming had given wrong labels to 773 channels in 9 files (rows missing, extra or out of order before that position).
+
+## Negative event duration (18 Oct 2026)
+
+In 5 events.tsv files one phoneme row had a negative duration (-16.351257 s; stimulus `s1503a-ex01`, word `virginia`, phone `ah`), the same in every subject, i.e. an error of the phoneme alignment of that stimulus. MNE refuses annotations with negative duration (`read_raw_bids` stopped with an AssertionError). The duration of that row is now `n/a`; onset and all other rows are unchanged. Files: `sub-SD011_ses-01_task-PassiveListen_events.tsv` (onset 2407.27965616 s), `sub-SD012_ses-02_task-PassiveListen_events.tsv` (onset 2316.57981631 s), `sub-SD019_ses-01_task-PassiveListen_events.tsv` (onset 2526.43596113 s), `sub-SD021_ses-01_task-PassiveListen_events.tsv` (onset 2462.68799463 s), `sub-SD022_ses-01_task-PassiveListen_events.tsv` (onset 2409.92375203 s).

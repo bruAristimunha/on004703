@@ -1,0 +1,6 @@
+name	type	units	low_cutoff	high_cutoff	status	status_description
+C63	SEEG	uV	512	n/a	good	n/a
+C63	OTHER	uV	512	n/a	bad	noise
+C64	SEEG	uV	512	n/a	good	n/a
+C64	OTHER	uV	512	n/a	bad	noise
+STI 014	MISC	n/a	512	n/a	bad	noise

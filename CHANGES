@@ -1,3 +1,8 @@
+Unreleased 2026-10-18
+  - channels.tsv of 11 recordings = the data-file header channel list (name, order, count; matched by name): 0 rows renamed to the header name, 10 rows added, 17 rows removed (kept in sourcedata/channels-removed-2026-10-18/), 0 files reordered. mne_bids read_raw_bids raised 'Channel mismatch'.
+  - events.tsv (5 files, annexed before, now plain git files): duration -16.351257 s of one phoneme row (s1503a-ex01 'virginia' /ah/) -> n/a; read_raw_bids raised AssertionError (negative annotation duration).
+  - README: section 'Channel names follow the data headers'.
+
 1.1.0 2023-08-18
   - typo and dataset title
 1.0.0 2023-08-16

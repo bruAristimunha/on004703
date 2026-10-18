@@ -1,4 +1,6 @@
 name	type	units	low_cutoff	high_cutoff	status	status_description
+Trigger Event	TRIG	n/a	n/a	n/a	n/a	n/a
+Patient Event	MISC	n/a	n/a	n/a	n/a	n/a
 LIP1	SEEG	uV	512	n/a	good	n/a
 LIP2	SEEG	uV	512	n/a	good	n/a
 LIP3	SEEG	uV	512	n/a	good	n/a
@@ -275,4 +277,3 @@ TRIG	TRIG	n/a	n/a	n/a	bad	noise
 OSAT	MISC	n/a	512	n/a	bad	noise
 PR	MISC	n/a	512	n/a	bad	noise
 Pleth	MISC	n/a	512	n/a	bad	noise
-STI 014	MISC	n/a	512	n/a	bad	noise

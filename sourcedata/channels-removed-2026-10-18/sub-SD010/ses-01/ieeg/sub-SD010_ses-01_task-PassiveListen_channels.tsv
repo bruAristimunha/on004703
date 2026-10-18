@@ -1,0 +1,4 @@
+name	type	units	low_cutoff	high_cutoff	status	status_description
+Trigger Event	MISC	n/a	512	n/a	bad	noise
+Patient Event	MISC	n/a	512	n/a	bad	noise
+STI 014	MISC	n/a	512	n/a	bad	noise

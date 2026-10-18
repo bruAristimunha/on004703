@@ -5,7 +5,7 @@
     "EEGChannelCount": 0,
     "EMGChannelCount": 0,
     "EOGChannelCount": 0,
-    "ElectricalStimulation":false,
+    "ElectricalStimulation": false,
     "ElectrodeManufacturer": "AD-TECH",
     "ElectrodeManufacturersModelName": "Spencer Probe",
     "HardwareFilters": "n/a",
@@ -13,19 +13,21 @@
     "Instructions": "",
     "Manufacturer": "Natus",
     "ManufacturersModelName": "Quantum",
-    "MiscChannelCount": 1,
+    "MiscChannelCount": 45,
     "PowerLineFrequency": 60,
     "RecordingDuration": 1146.5,
     "RecordingType": "continuous",
     "SEEGChannelCount": 100,
     "SamplingFrequency": 512.0,
-    "SoftwareFilters": {"Lowpass": 
-        {"half-amplitude cutoff (Hz)": 256.0}
+    "SoftwareFilters": {
+        "Lowpass": {
+            "half-amplitude cutoff (Hz)": 256.0
+        }
     },
     "SoftwareVersions": "NeuroWorks",
     "TaskDescription": "Participant passively listens     to 30-45s passages of conversational speech and     verbally answers a 2AC content question after each     passage. 6 blocks with 7 passages per block.",
     "TaskName": "PassiveListen",
-    "TriggerChannelCount": 0,
+    "TriggerChannelCount": 1,
     "iEEGGround": "scalp electrode, not included with data",
     "iEEGPlacementScheme": "10 depth with 10 contacts each, right hemisphere only",
     "iEEGReference": "scalp electrode, not included with data"

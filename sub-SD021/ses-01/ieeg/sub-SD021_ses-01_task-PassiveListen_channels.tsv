@@ -62,10 +62,8 @@ LTH13	SEEG	uV	512	n/a	good	n/a
 LTH14	SEEG	uV	512	n/a	good	n/a
 LTH15	SEEG	uV	512	n/a	good	n/a
 LTH16	SEEG	uV	512	n/a	good	n/a
-C63	SEEG	uV	512	n/a	good	n/a
-C63	OTHER	uV	512	n/a	bad	noise
-C64	SEEG	uV	512	n/a	good	n/a
-C64	OTHER	uV	512	n/a	bad	noise
+C63	SEEG	µV	n/a	n/a	n/a	n/a
+C64	SEEG	µV	n/a	n/a	n/a	n/a
 LMEGOF1	SEEG	uV	512	n/a	good	n/a
 LMEGOF2	SEEG	uV	512	n/a	good	n/a
 LMEGOF3	SEEG	uV	512	n/a	good	n/a
@@ -278,4 +276,3 @@ TRIG	TRIG	n/a	n/a	n/a	bad	noise
 OSAT	MISC	n/a	512	n/a	bad	noise
 PR	MISC	n/a	512	n/a	bad	noise
 Pleth	MISC	n/a	512	n/a	bad	noise
-STI 014	MISC	n/a	512	n/a	bad	noise
