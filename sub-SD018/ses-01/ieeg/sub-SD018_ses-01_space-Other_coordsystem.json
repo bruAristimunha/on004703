@@ -1,0 +1,5 @@
+{
+  "iEEGCoordinateSystem": "Other",
+  "iEEGCoordinateUnits": "mm",
+  "iEEGCoordinateSystemDescription": "Standard MNI space (template variant not stated by the authors), mm. Values = sub-<S>/ses-01/anat/<S>_contact_RAS.csv of this deposit, which are identical (0.000 mm, 1,193/1,193 contacts) to the authors' mni_electrode_coordinates.pkl (github.com/acmai/NCOMMS-23-00607, Figure1-S10/), plotted by their code on the MNI glass brain on a 1-mm grid (affine diag(1), origin -90 mm). Paper (Nat Commun, PMC10805762) Fig. 1b: 'warped to standard MNI space'."
+}
