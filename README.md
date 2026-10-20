@@ -45,3 +45,7 @@ EEGDash's positional renaming had given wrong labels to 773 channels in 9 files 
 ## Negative event duration (18 Oct 2026)
 
 In 5 events.tsv files one phoneme row had a negative duration (-16.351257 s; stimulus `s1503a-ex01`, word `virginia`, phone `ah`), the same in every subject, i.e. an error of the phoneme alignment of that stimulus. MNE refuses annotations with negative duration (`read_raw_bids` stopped with an AssertionError). The duration of that row is now `n/a`; onset and all other rows are unchanged. Files: `sub-SD011_ses-01_task-PassiveListen_events.tsv` (onset 2407.27965616 s), `sub-SD012_ses-02_task-PassiveListen_events.tsv` (onset 2316.57981631 s), `sub-SD019_ses-01_task-PassiveListen_events.tsv` (onset 2526.43596113 s), `sub-SD021_ses-01_task-PassiveListen_events.tsv` (onset 2462.68799463 s), `sub-SD022_ses-01_task-PassiveListen_events.tsv` (onset 2409.92375203 s).
+
+## Electrode positions (20 Oct 2026)
+
+Nine subjects (SD0xx with an `anat/*_contact_RAS.csv`) now have `sub-SDxxx_ses-01_space-Other_electrodes.tsv` and `..._coordsystem.json` (`Other`, `mm`). The x/y/z are the R/A/S columns of the deposit's own `anat/*_contact_RAS.csv` (one row per contact, name = label + contact number); they equal the authors' published MNI electrode coordinates. The deposit does not state which MNI template variant was used, so the frame is declared `Other` with that limitation in its description. Two recordings have no such file and remain without electrodes.

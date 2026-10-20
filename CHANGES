@@ -1,4 +1,5 @@
 Unreleased 2026-10-18
+  - 9 sub-SDxxx ses-01 `space-Other` electrodes.tsv/coordsystem.json pairs added (Other/mm): coordinates taken from the deposit's own `anat/*_contact_RAS.csv` (label + contact -> name, R/A/S -> x/y/z), equal to the authors' published MNI coordinates; the MNI template variant is not stated in the deposit.
   - channels.tsv of 11 recordings = the data-file header channel list (name, order, count; matched by name): 0 rows renamed to the header name, 10 rows added, 17 rows removed (kept in sourcedata/channels-removed-2026-10-18/), 0 files reordered. mne_bids read_raw_bids raised 'Channel mismatch'.
   - events.tsv (5 files, annexed before, now plain git files): duration -16.351257 s of one phoneme row (s1503a-ex01 'virginia' /ah/) -> n/a; read_raw_bids raised AssertionError (negative annotation duration).
   - README: section 'Channel names follow the data headers'.
